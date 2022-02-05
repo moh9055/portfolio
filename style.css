@@ -1,0 +1,424 @@
+/* TABLE OF CONTENTS */
+/* ------------------
+1. General
+2. Navbar
+3. Banner
+4. About
+5. Services
+6. Portfolio
+6. Contact
+7. Footer
+-------------------- */
+
+/* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --primary-color: #FD4766;
+    --secondary-color: #0e1525;
+    --bg-dark-blue: #091020;
+    --bg-white: #fff;
+    --gray-color: #c6c9d8bf;
+    --gradient-color: linear-gradient(-224deg, var(--primary-color) 0, #337DFF 100%);
+    --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
+
+    /* Text Color */
+    --primary-font:'Poppins', sans-serif;
+    --primary-text: #FD4766;
+    --text-gray: #c6c9d8bf;
+    --text-white: #fff;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 1 Custom CSS */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark-blue);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+h1{
+    font-size: 48px;
+    color: var(--text-white);
+    line-height: 1.5;
+    font-weight: 800;
+}
+h2{
+    color: var(--text-white);
+    font-size: 48px;
+    font-weight: 700;
+    margin: 10px 0 15px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 14px;
+}
+h6{
+    color: var(--text-gray);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.subtitle{
+    background: var(--primary-color);
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+p{
+    color: var(--text-gray);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+.mainbtn{
+    padding: 8px 25px !important;
+    border: 2px solid var(--text-gray);
+    border-radius: 25px;
+    box-shadow: none;
+    background: transparent;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+}
+
+        
+      /*navbar css  */
+.header_wrapper .navbar{
+    transition: all 0.2s linear;
+    z-index: 9;
+}
+
+.navbar-brand{
+    max-width: 120px;
+    height: auto;
+}      
+
+.navbar-nav .nav-item{
+    margin: 10px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: var(--text-gray);
+}
+
+.navbar-nav .nav-item .nav-link.active{
+    color: var(--text-white);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--text-white);
+    border-bottom: 3px solid var(--primary-color);
+    transition: all 0.7s ease-in-out;
+
+}
+
+
+.navbar-nav .nav-item .nav-link.mainbtn:hover{
+    background: var(--primary-color);
+    color: var(--text-white);
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+.header-scrolled{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--secondary-color);
+}
+/* home css */
+.home{
+    min-height: 650px;
+    height: auto;
+    width: 100%;
+    background: url(bg-image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 200px 0 150px;
+}
+
+.home h1 span{
+    color: var(--primary-text);
+}
+
+.home .mainbtn{
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+/* about css */
+#aboutus .about{
+    padding: 100px 0;
+}
+.nav-pills{
+    border: 1px solid var(--text-gray);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+.nav-pills .nav-link{
+    color: var(--text-gray);
+    text-transform: capitalize;
+}
+
+.nav-pills .nav-link.active{
+    border-radius: 25px;
+    background: var(--primary-color);
+}
+
+.single_process{
+  position: relative;
+}
+.single_process h6:first-child{
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.single_process h6:last-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+    letter-spacing: 0;
+}
+.progress{
+    height: 4px;
+}
+.progress .progress-bar{
+    background: var(--gradient-color);
+
+}
+.tab-pane ul li,
+.tab-pane ul li a{
+    color: var(--text-gray);
+    list-style: none;
+}
+
+/* service css */
+
+#service .card{
+    background-color: var(--bg-dark-blue);
+    color: var(--text-white);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#service .card img{
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* portfolio css */
+#Portfolio .card{
+    margin-bottom: 40px;
+}
+
+#Portfolio .card span{
+    height: 100%;
+    min-height: 350px;
+    width: auto;
+    overflow: hidden;
+     background-size: cover;
+     background-position: top center;
+     transition: all 4s ease-in-out 0s;
+
+ }
+
+ #Portfolio .card span:hover{
+     background-position: bottom center;
+ }
+
+/* contact css */
+
+#contact .form-control{
+    background: transparent;
+    border: unset;
+    outline: unset;
+    padding-left: 0;
+}
+
+#contact .form-control input{
+    background: transparent;
+    border: 2px solid var(--text-gray);
+    padding: 12px;
+    color: var(--text-gray);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* footer css */
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: var(--bg-dark-blue);
+    padding: 20px 0;
+}
+
+footer img{
+    width: 100px;
+    height: auto;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+footer a{
+    border: 2px solid var(--text-gray);
+    padding: 6px 10px;
+    border-radius: 100%;
+    text-align: center;
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    display: inline-table;
+    transition: all .7s ease-in-out;
+    font-size: 14px;
+}
+
+footer a i{
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+footer a:hover{
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+}
+footer h6{
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+footer h6 span{
+    color: var(--primary-color);
+}
+
+@media(max-width:992px){
+    .navbar-toggler-icon{
+        color: var(--text-gray);
+        box-shadow: none;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .navbar-nav{
+        background: var(--secondary-color);
+        color: var(--text-white);
+    }
+    .navbar-nav .nav-item{
+        margin: 10px auto;
+    }
+    .navbar-nav .nav-item .nav-link{
+        width: fit-content
+        text-align: center;
+    }
+    #Portfolio .card span{
+        min-height: 450px;
+    }
+    #contact .row{
+        flex-direction: column-reverse;
+    }
+    #contact img{
+        margin-bottom: 20px;
+    }
+     footer .col-lg-4:not(:last-child){
+         margin-bottom: 20px;
+     }
+
+
+}
+@media(max-width:767px){
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    h6{
+        font-size: 14px;
+    }
+    .home{
+        text-align: center;
+    }
+    .subtitle{
+        text-align: center;
+    }
+    p{
+        line-height: 1.5;
+        font-size: 14px;
+    }
+    .about_text{
+        text-align: center;
+    }
+    .about_text p{
+        text-align: left;
+    }
+    .nav-pills .nav-item{
+        margin: auto;
+        margin-bottom: 14px !important;
+    }
+    #service .card{
+        margin-bottom: 20px;
+    }
+    footer .row{
+        align-items: center;
+        text-align: center;
+    }
+    footer .col-lg-4:nth-child(2){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    footer ul{
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+@media(max-width:430px){
+    .nav-pills{
+        border: none;
+        } 
+        
+        .nav-pills .nav-item{
+        text-align: center;
+        margin: auto;
+        }
+}
